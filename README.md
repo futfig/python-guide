@@ -7,6 +7,17 @@ This guide walks you through learning Python basics by building a command-line T
 - Create a project folder and a virtual environment: `python -m venv .venv && source .venv/bin/activate`.
 - Add a `main.py` file where you will write the game.
 
+### Installing Python on Windows
+- Download the latest Windows installer from the official Python website (choose the 64-bit version that matches your system).
+- Run the installer and **check the box labeled “Add python.exe to PATH”** so you can call Python from any Command Prompt.
+- Select “Customize installation,” keep the default optional features, and choose **“Install for all users”** to avoid permission issues.
+- When prompted for the install location, accept the default or pick a path without spaces (e.g., `C:\Python311`).
+- After installation, verify it works by opening Command Prompt and running `python --version` and `pip --version`.
+- To create and activate a virtual environment in PowerShell:
+  - `python -m venv .venv`
+  - `./.venv/Scripts/Activate.ps1`
+- If execution policy blocks activation, run `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` in an elevated PowerShell window, then activate again.
+
 ## 2) Represent the game board with lists
 - Start with a 1D list of nine strings to hold the squares: `board = [" "] * 9`.
 - Use indices `0-8` to map to positions; later you can map user-friendly positions (1-9) to these indices.
